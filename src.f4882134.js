@@ -36,4 +36,4 @@ var o;function t(o){return(t="function"==typeof Symbol&&"symbol"==typeof Symbol.
 },{"vanilla-back-to-top":"mehQ"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/search-movie-by-keyword"),require("./js/get-popular"),require("./js/team"),require("./js/pagination"),require("./js/button-up");
 },{"./sass/main.scss":"clu1","./js/search-movie-by-keyword":"L8gt","./js/get-popular":"Ul5O","./js/team":"ZxpD","./js/pagination":"o8lo","./js/button-up":"v0cT"}]},{},["Focm"], null)
-//# sourceMappingURL=/final-project-js/src.77766d1f.js.map
+//# sourceMappingURL=/final-project-js/src.f4882134.js.map

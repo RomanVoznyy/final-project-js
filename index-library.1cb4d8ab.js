@@ -44,4 +44,4 @@ var o;function t(o){return(t="function"==typeof Symbol&&"symbol"==typeof Symbol.
 },{"vanilla-back-to-top":"mehQ"}],"qCDc":[function(require,module,exports) {
 "use strict";require("../../sass/main.scss"),require("../../sass/library.scss"),require("./render-library"),require("./pagination-library"),require("../team"),require("../button-up");
 },{"../../sass/main.scss":"clu1","../../sass/library.scss":"CjpQ","./render-library":"zg1N","./pagination-library":"RSKD","../team":"ZxpD","../button-up":"v0cT"}]},{},["qCDc"], null)
-//# sourceMappingURL=/final-project-js/index-library.1b4552df.js.map
+//# sourceMappingURL=/final-project-js/index-library.1cb4d8ab.js.map
