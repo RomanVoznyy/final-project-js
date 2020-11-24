@@ -70,6 +70,11 @@ export default class FilmsApiService {
 
   singleRequest(id) {
     return fetch(`${BASE_URL}movie/${id}?api_key=${API_KEY}`).then(response =>
+      response.json());
+  }
+
+  singleVideoRequest(id) {
+    return fetch(`${BASE_URL}movie/${id}/videos?api_key=${API_KEY}`).then(response =>
       response.json(),
     );
   }

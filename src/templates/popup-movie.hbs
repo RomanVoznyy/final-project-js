@@ -2,7 +2,7 @@
 <img class="popup-poster" src="https://image.tmdb.org/t/p/w500/{{poster_path}}" alt="{{title}}" data-id="{{id}}" />
 {{else}}
 <img class="popup-poster" src="https://dummyimage.com/294x441/f0f0f0/000.jpg&text=YOU%27RE+AWESOME+:)"
-	alt="placeholder" />
+	 alt="placeholder" />
 {{/if}}
 
 <div class="popup-description">
@@ -25,6 +25,20 @@
 		<tr>
 			<td class="info-title">Genre</td>
 			<td class="info-genre">{{#each genres}} {{name}}{{#unless @last}},{{/unless}} {{/each}}</td>
+		</tr>
+		<tr>
+			<td class="info-title">Trailer</td>
+			<td class="info-video">
+				{{#if videoKey}}
+				<iframe class="info-video-frame" width="200" src="https://www.youtube.com/embed/{{videoKey}}"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen>
+				</iframe>
+				{{else}}
+				No video for this movie
+				{{/if}}
+			</td>
 		</tr>
 	</table>
 

@@ -9,11 +9,12 @@ const filmsApiService = new FilmsApiService();
 
 export function startPopup(id) {
   loaderToggle();
-  filmsApiService
-    .singleRequest(id)
-    .then(renderPage)
-    .then(loaderToggle)
-    .catch(error => console.log(error));
+  const filmDataPromises = [];
+
+  filmDataPromises.push(filmsApiService.singleRequest(id));
+  filmDataPromises.push(filmsApiService.singleVideoRequest(id));
+
+  Promise.all(filmDataPromises).then(renderPage).then(loaderToggle).catch(error => console.log(error));
 
   refs.body.classList.add('popup-open');
   refs.popup.classList.add('is-open');
@@ -23,10 +24,15 @@ export function startPopup(id) {
 }
 
 function renderPage(film) {
-  const markup = popupMovieTpl(film);
+  const markup = popupMovieTpl(createOneObject(film));
   refs.movieField.innerHTML = markup;
   checkMarkup();
   onModalButtons();
+}
+
+function createOneObject(film) {
+  film[0].videoKey = film[1].results.length ? film[1].results[0].key : false;
+  return film[0];
 }
 
 function closePopup({ type, key }) {
