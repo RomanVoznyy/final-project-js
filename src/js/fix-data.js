@@ -20,7 +20,7 @@ export default function fixData(films) {
 }
 
 function getGenres() {
-  return filmsApiService.fetchGenres(); //получае м жанры с сервера
+  return filmsApiService.fetchGenres(); //получаем жанры с сервера
 }
 
 function fixDate(date) {

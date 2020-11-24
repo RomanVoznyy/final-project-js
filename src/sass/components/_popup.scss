@@ -179,6 +179,14 @@ td {
   text-transform: uppercase;
 }
 
+.info-video {
+  @include flex();
+
+  &-frame {
+    background-image: $video-bg-color;
+  }
+}
+
 .popup-overview-title {
   margin-bottom: 10px;
   text-transform: uppercase;

@@ -12,6 +12,7 @@ const refs = {
   movieField: document.querySelector('.popup-movie'),
   btnClose: document.querySelector('.js-close'),
 
+  teamContainer: document.querySelector('.team-members'),
   openTeamModalBtn: document.querySelector('.js-open-modal'),
   closeTeamModalBtn: document.querySelector('.js-team-close'),
   backdropTeamModal: document.querySelector('.js-backdrop'),
